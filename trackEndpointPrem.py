@@ -45,7 +45,7 @@ def disconnectCall(myIpAddr,isHost):
 
 
 def callCmr(myIpAddr,isHost):
-        print("Calling CMR " + number)
+        print("Calling CMR " + cmrAddress)
 
         xmlMsg = "<Command><Dial><Number>"+cmrAddress+"</Number></Dial></Command>"
         myRequest = requests.post("http://"+myIpAddr+"/putxml", verify=False, headers={'Authorization': 'Basic '+ authToken}, data=xmlMsg)
