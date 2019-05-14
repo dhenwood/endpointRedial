@@ -1,2 +1,2 @@
 # endpointRedial
-This python script can be used to redial an endpoint back into a meeting
+This python script can be used to redial an endpoint back into a meeting. It's main use case is for '_always on_' meetings where endpoints remain on a video bridge indefinately. Currently platforms such as Webex have a maximum meeting duration of 12hrs, at which time, all endpoints drop off. This script can be run at times such as every 11hrs and momentarily disconnect the call, before dialling back in.
