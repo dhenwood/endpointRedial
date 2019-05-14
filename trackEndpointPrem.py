@@ -8,7 +8,7 @@ from base64 import b64encode
 endpointUsername = "admin"
 endpointPassword = "C!sco123"
 myMaxTimer = 10         #seconds
-number = "dhenwood.space@ciscolabs.com"
+cmrAddress = "dhenwood.space@ciscolabs.com"
 hostPin = "1234"
 
 myEndpoints = [
@@ -47,7 +47,7 @@ def disconnectCall(myIpAddr,isHost):
 def callCmr(myIpAddr,isHost):
         print("Calling CMR " + number)
 
-        xmlMsg = "<Command><Dial><Number>"+number+"</Number></Dial></Command>"
+        xmlMsg = "<Command><Dial><Number>"+cmrAddress+"</Number></Dial></Command>"
         myRequest = requests.post("http://"+myIpAddr+"/putxml", verify=False, headers={'Authorization': 'Basic '+ authToken}, data=xmlMsg)
 
 
